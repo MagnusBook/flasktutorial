@@ -26,3 +26,6 @@ When you first run the app you need to initialize the database. To do this, you 
 Run the following command in the root directory of the project:
 
 `flask run`
+
+## Deploying to Heroku
+A tutorial for deploying this and other applications to Heroku has been published in the [wiki](https://github.com/MagnusBook/flasktutorial/wiki/Deploying-to-Heroku).
