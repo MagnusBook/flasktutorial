@@ -30,7 +30,7 @@ def init_db():
 
 
 def query_db(query, args=(), one=False):
-    cur = get_db().cursor()
+    cur = get_db().cursor(cursor_factory=psycopg2.extras.DictCursor)
     cur.execute(query, args)
     rv = cur.fetchall()
     cur.close()
