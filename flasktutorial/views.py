@@ -4,7 +4,7 @@ from flasktutorial import app, query_db
 
 @app.route('/')
 def index():
-    articles = query_db('SELECT rowid, * FROM article;')
+    articles = query_db('SELECT id, * FROM article;')
     return render_template('index.html', articles=articles)
 
 
