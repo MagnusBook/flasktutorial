@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 DATABASE = os.environ['DATABASE_URL']
 
+init_db()
+
 
 def get_db():
     db = getattr(g, '_database', None)
