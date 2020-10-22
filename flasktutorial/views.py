@@ -11,5 +11,5 @@ def index():
 @app.route('/article/<int:article_id>')
 def article(article_id):
     article = query_db(
-        'SELECT * FROM article WHERE id=%s;', (article_id), True)
+        'SELECT * FROM article WHERE id=%s;', (article_id,), True)
     return render_template('article.html', article=article)
