@@ -6,8 +6,6 @@ app = Flask(__name__)
 
 DATABASE = os.environ['DATABASE_URL']
 
-init_db()
-
 
 def get_db():
     db = getattr(g, '_database', None)
@@ -38,5 +36,7 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
+
+init_db()
 
 import flasktutorial.views
