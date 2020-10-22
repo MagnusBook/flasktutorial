@@ -1,8 +1,10 @@
 from flask import Flask, g
 import psycopg2
+import os
+
 app = Flask(__name__)
 
-DATABASE = 'postgresql:///DATABASE'
+DATABASE = os.environ['DATABASE_URL']
 
 
 def get_db():
